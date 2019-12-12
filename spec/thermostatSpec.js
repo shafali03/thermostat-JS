@@ -8,8 +8,15 @@ describe('Thermostat', function() {
     thermostat = new Thermostat();
   });
 
-  it('temperature set at 20 degrees', function(){
-    expect(thermostat.temperature).toEqual(20);
+  it('start at 20 degrees', function(){
+    expect(thermostat.currentTemperature()).toEqual(20);
   });
+
+  it('increase temperature with up()', function() {
+    thermostat.up();
+    expect(thermostat.currentTemperature()).toEqual(21);
+  });
+
+  
 });
 
