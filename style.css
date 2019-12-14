@@ -1,128 +1,143 @@
-/* body {
-  background-image: url('img/weather.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: white;
-  text-shadow: 2px 2px 1px black;
-  height: 100%;
-  align-content: center;
-}
-
-h1{
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .center {
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#weatherContainer {
-  
-  background-color: rgba(0, 0, 0, 0.25);
-  box-shadow: 1px 1px 5px black;
-  padding: 50px;
-  border-radius: 10px;
-  position: absolute;
+.psm {
+  display: flex;
+  flex-direction: column;
 }
 
-
-
-#weatherContainer {
-  margin: 5px;
-  font-size: 22px;
-
-} */
-
-
-#weatherContainer,
-#searchContainer {
- display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center; 
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#select-city {
+.row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
-
 
 #current-city {
-  box-shadow: 2px 2px 5px black;
+  background: #2f3640;
+  height: 35px;
+  border-radius: 50px;
+  padding: 15px;
   border: none;
-  border-radius: 5px;
-  padding: 5px;
-  margin-right: 10px;
+  outline: none;
+  margin: 15px;
+  color: white;
+  width: 250px;
 }
 
-
 .low-usage {
-  color:green;
+  color: green;
 }
 
 .medium-usage {
   color: black;
 }
 
-.high-usage{
+.high-usage {
   color: red;
 }
 
-.searchControl {
+#select-city {
+  padding: 10px;
+}
+
+#current-city {
   box-shadow: 2px 2px 5px black;
   border: none;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
+  size: 35;
 }
 
-.circle {
-  width: 200px;
-  height: 200px;
-  background: red;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; 
+button:focus {
+  outline: 0;
 }
 
- .inner-box {
-  
-  
-  
- }
-
-
-.sphere {
-  /* padding-top: 20px;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  text-align: center;
-  vertical-align: bottom;
-  font-size: 100%;
+.thermostat {
   position: relative;
-  box-shadow: inset -10px -10px 100px #000, 10px 10px 20px black, inset 0px 0px 10px black;
-  
-  margin: 4%; */
-}
-.sphere::after {
-  /* content: '';
-  height: 45%;
-  width: 12%;
-  position: absolute;
-  top: 4%;
-  left: 15%;
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
   border-radius: 50%;
-  transform: rotate(40deg); */
-} 
+  border: 10px solid #333;
+  background: red;
+}
 
+.controls {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 40px;
+  border: 5px solid #ddd;
+  background: white;
+}
 
+.btn {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  font-size: 40px;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
 
+.btn#temp-up {
+  left: auto;
+  right: 15px;
+}
+
+#temperature {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 20px;
+  text-align: center;
+  font-size: 150px;
+}
+
+.btn#temp-reset {
+  position: relative;
+  top: 80%;
+  left: 40%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.submit-btn {
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 4px;
+  display: inline-block;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  margin: 5px;
+  padding: 0 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
